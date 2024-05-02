@@ -1,0 +1,45 @@
+# docker ps -a  
+CONTAINER ID   IMAGE     COMMAND                  CREATED          STATUS                      PORTS     NAMES
+96c546f63f3d   nginx     "/docker-entrypoint.…"   14 minutes ago   Exited (0) 13 minutes ago             awesome_raman
+3bfb486eb6f1   nginx     "/docker-entrypoint.…"   14 minutes ago   Exited (0) 13 minutes ago             heuristic_shirley
+938311f3e6db   nginx     "/docker-entrypoint.…"   14 minutes ago   Up 14 minutes               80/tcp    nostalgic_colden
+
+# docker image ls
+REPOSITORY   TAG       IMAGE ID       CREATED      SIZE
+nginx        latest    7383c266ef25   8 days ago   188MB
+
+# docker stop 938311f3e6db
+938311f3e6db
+
+# docker ps -a            
+CONTAINER ID   IMAGE     COMMAND                  CREATED          STATUS                      PORTS     NAMES
+96c546f63f3d   nginx     "/docker-entrypoint.…"   15 minutes ago   Exited (0) 14 minutes ago             awesome_raman
+3bfb486eb6f1   nginx     "/docker-entrypoint.…"   15 minutes ago   Exited (0) 14 minutes ago             heuristic_shirley
+938311f3e6db   nginx     "/docker-entrypoint.…"   15 minutes ago   Exited (0) 7 seconds ago              nostalgic_colden
+
+#  docker container rm 96c546f63f3d 3bfb486eb6f1 938311f3e6db
+96c546f63f3d
+3bfb486eb6f1
+938311f3e6db
+
+#  docker ps -a
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+
+#  docker image ls
+REPOSITORY   TAG       IMAGE ID       CREATED      SIZE
+nginx        latest    7383c266ef25   8 days ago   188MB
+
+#  docker image rm 7383c266ef25
+Untagged: nginx:latest
+Untagged: nginx@sha256:ed6d2c43c8fbcd3eaa44c9dab6d94cb346234476230dc1681227aa72d07181ee
+Deleted: sha256:7383c266ef252ad70806f3072ee8e63d2a16d1e6bafa6146a2da867fc7c41759
+Deleted: sha256:284239a88aa2a215c3ab52265554c83612e73efea682954be87982e370c98f49
+Deleted: sha256:05092aeb22646fda43f7e25fc418b7e21942112b84bc0f5b2466f6206372e099
+Deleted: sha256:04de068faa51d09eb7e1e52a4911ffc894d2ab2640db17e77eab84ca22cada85
+Deleted: sha256:08b0ce47715b739cb30d253768b913e0d81a466f34b84addf24dc78ae61579e8
+Deleted: sha256:90f1c22432ddccd4e1f6cd933c964e71a8f6bdd39b035f60cf4b8153820db7b5
+Deleted: sha256:0a9e7b5b5ef53ef025d0cb5798a2a49aa52289a5d9ad86687b428c19a63a3e22
+Deleted: sha256:52ec5a4316fadc09a4a51f82b8d7b66ead0d71bea4f75e81e25b4094c4219061
+
+#  docker image ls             
+REPOSITORY   TAG       IMAGE ID   CREATED   SIZE

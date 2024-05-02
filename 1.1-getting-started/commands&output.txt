@@ -1,0 +1,24 @@
+# docker run -d nginx
+938311f3e6db1e5e686089168a569534904b1345e3841fe51e29d275897dd9f4 
+
+# docker run -d nginx
+3bfb486eb6f17591b4f74b698df9204b03db850019e391049c14e308f2c5114c
+
+# docker run -d nginx
+96c546f63f3d80e930b7025a9ee1e5f9cdc5af4fbb95de4b3af8335a60bb14a4
+
+# docker container ls
+CONTAINER ID   IMAGE     COMMAND                  CREATED          STATUS          PORTS     NAMES
+96c546f63f3d   nginx     "/docker-entrypoint.…"   44 seconds ago   Up 44 seconds   80/tcp    awesome_raman
+3bfb486eb6f1   nginx     "/docker-entrypoint.…"   46 seconds ago   Up 45 seconds   80/tcp    heuristic_shirley
+938311f3e6db   nginx     "/docker-entrypoint.…"   49 seconds ago   Up 48 seconds   80/tcp    nostalgic_colden
+
+# docker stop 96c546f63f3d 3bfb486eb6f1
+96c546f63f3d
+3bfb486eb6f1
+
+# docker ps -a
+CONTAINER ID   IMAGE     COMMAND                  CREATED              STATUS                     PORTS     NAMES
+96c546f63f3d   nginx     "/docker-entrypoint.…"   About a minute ago   Exited (0) 4 seconds ago             awesome_raman
+3bfb486eb6f1   nginx     "/docker-entrypoint.…"   About a minute ago   Exited (0) 4 seconds ago             heuristic_shirley
+938311f3e6db   nginx     "/docker-entrypoint.…"   About a minute ago   Up About a minute          80/tcp    nostalgic_colden
