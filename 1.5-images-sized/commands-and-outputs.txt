@@ -1,0 +1,21 @@
+# docker pull devopsdockeruh/simple-web-service:ubuntu
+# docker pull devopsdockeruh/simple-web-service:alpine
+
+# docker image ls
+REPOSITORY                          TAG       IMAGE ID       CREATED       SIZE
+ubuntu                              latest    bf3dc08bfed0   3 days ago    76.2MB
+devopsdockeruh/simple-web-service   ubuntu    4e3362e907d5   3 years ago   83MB
+devopsdockeruh/simple-web-service   alpine    fd312adc88e0   3 years ago   15.7MB
+
+# docker run -d --name exercise-1.5 devopsdockeruh/simple-web-service:alpine
+286959e68c2c5d54a5ca7027ebe4c7965de728ce10cdb78adabb69fef252a8af
+
+# docker exec -ti exercise-1.5 sh -c 'tail -f ./text.log'
+2024-05-02 17:48:09 +0000 UTC
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+2024-05-02 17:48:11 +0000 UTC
+2024-05-02 17:48:13 +0000 UTC
+2024-05-02 17:48:15 +0000 UTC
+2024-05-02 17:48:17 +0000 UTC
+2024-05-02 17:48:19 +0000 UTC
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
