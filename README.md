@@ -4,7 +4,7 @@ Each exercise content (files) is in its corresponding folder. The name of each e
 
 In the submitted file exercises consisting of commands and outputs (named commands-and-output.txt), I have followed the following nomenclature:
 ```
-# # Comments 
-# commands
+# Comments 
+$ commands
 (nothing) output of the commands
 ```

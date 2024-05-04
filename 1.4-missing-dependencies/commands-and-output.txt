@@ -1,22 +1,22 @@
-# # I run the container with the command 
-# docker run -d -it --name exercise-1.4 ubuntu sh -c 'while true; do echo "Input website:"; read website; echo "Searching.."; sleep 1; curl http://$website; done'
+# I run the container with the command 
+$ docker run -d -it --name exercise-1.4 ubuntu sh -c 'while true; do echo "Input website:"; read website; echo "Searching.."; sleep 1; curl http://$website; done'
 
-# # Then I attach the container and press ^P^Q for not stop the container
-# docker attach exercise-1.4
+# Then I attach the container and press ^P^Q for not stop the container
+$ docker attach exercise-1.4
 helsinki.fi
 Searching..
 sh: 1: curl: not found
 Input website:
 read escape sequence
 
-# # I install curl 
-# docker exec -it exercise-1.4 sh -c 'apt-get update && apt-get install -y curl'
+# I install curl 
+$ docker exec -it exercise-1.4 sh -c 'apt-get update && apt-get install -y curl'
 Get:1 http://archive.ubuntu.com/ubuntu noble/main amd64 openssl amd64 3.0.13-0ubuntu3 [1002 kB]
 Get:2 http://archive.ubuntu.com/ubuntu noble/main amd64 ca-certificates all 20240203 [159 kB]
 ....
 
-# # Again I attach the container and now I get the correct result
-# docker attach exercise-1.4
+# Again I attach the container and now I get the correct result
+$ docker attach exercise-1.4
 helsinki.fi
 Searching..
 <html>

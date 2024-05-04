@@ -1,8 +1,8 @@
-# # To find out the key, I have done the following: 
-# # I went to the Dockerhub page, clicked on 'latest', read the Dockerfile, and saw that it runs index.js. 
-# # Afterwards, I ran 'sh' in the container, read index.js, and saw what key was needed
+# To find out the key, I have done the following: 
+# I went to the Dockerhub page, clicked on 'latest', read the Dockerfile, and saw that it runs index.js. 
+# Afterwards, I ran 'sh' in the container, read index.js, and saw what key was needed
 
-# docker run -it devopsdockeruh/pull_exercise
+$ docker run -it devopsdockeruh/pull_exercise
 Give me the password: basics
 You found the correct password. Secret message is:
 "This is the secret message"
