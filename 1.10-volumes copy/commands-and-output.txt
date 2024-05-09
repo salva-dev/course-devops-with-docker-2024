@@ -1,17 +1,5 @@
-# First, I touch a file before mounting, because option -v creates a directory if the file does not exist.
-$ touch text.log
+# We could use the previous image with docker run -d -p 127.0.0.1:8090:8080 web-server
+$ docker run -d -p 127.0.0.1:8090:8080 devopsdockeruh/simple-web-service server
 
-# Now mount the file
-$ docker run -v "$(pwd)/text.log:/usr/src/app/text.log" devopsdockeruh/simple-web-service
-Starting log output
-Wrote text to /usr/src/app/text.log
-Wrote text to /usr/src/app/text.log
-Wrote text to /usr/src/app/text.log
-Wrote text to /usr/src/app/text.log
-
-# After type CTRL+C
-$ more text.log
-2024-05-09 15:43:46 +0000 UTC
-2024-05-09 15:43:48 +0000 UTC
-2024-05-09 15:43:50 +0000 UTC
-2024-05-09 15:43:52 +0000 UTC
+$ curl localhost:8090 
+{"message":"You connected to the following path: /","path":"/"}%
