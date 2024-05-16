@@ -8,3 +8,4 @@ In the exercises with submitted file consisting of commands and outputs (named c
 $ commands
 (nothing) output of the commands
 ```
+Important: Before run commands be sure you are in the folder of exercise with cd <x.xx>
