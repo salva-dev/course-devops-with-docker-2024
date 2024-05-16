@@ -1,4 +1,5 @@
+# Previosly, I've copied the project folder in this folder
 $ docker build . -t spring-project && docker run -p 8080:8080 spring-project
 
 # After this, I open my browser in http://localhost:8080 , click button and obtain "Success"
-# I've attached screenshot in screenshot.png file
+# I've attached screenshot in screenshot.png filedocker 
