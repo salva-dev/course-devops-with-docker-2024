@@ -9,8 +9,8 @@ WORKDIR /usr/src/app
 COPY ./example-frontend .
 
 # Install web server and prerequisites
-RUN npm install -g serve
-RUN npm install
+RUN npm install -g serve@14.2.3 \
+    && npm install
 
 # Build the project
 RUN npm run build
