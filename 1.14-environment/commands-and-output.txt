@@ -1,0 +1,7 @@
+# Previosly, I've build the images
+# Run backend
+$ docker run -d -p 8080:8080 example-backend
+# Run frontend
+$ docker run -d -p 5000:5000 example-frontend
+
+# After this, I open my browser in http://localhost:5000 and I push button in exercise 1.14 and get message.

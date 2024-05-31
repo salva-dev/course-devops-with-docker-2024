@@ -13,6 +13,7 @@ RUN npm install -g serve@14.2.3 \
     && npm install
 
 # Build the project
+ENV REACT_APP_BACKEND_URL=http://localhost:8080
 RUN npm run build
 
 # Run
