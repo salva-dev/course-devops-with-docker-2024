@@ -7,3 +7,4 @@ services:
     image: devopsdockeruh/simple-web-service
     volumes:
       - ./text.log:/usr/src/app/text.log # be sure to make touch ./text.log in folder you run this
+    container_name: simple-web-service

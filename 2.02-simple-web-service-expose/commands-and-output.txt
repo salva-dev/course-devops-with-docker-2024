@@ -20,6 +20,3 @@ $ more text.log
 Secret message is: 'You can find the source code here: https://github.com/docker-hy'
 2024-06-08 09:03:41 +0000 UTC
 2024-06-08 09:03:43 +0000 UTC
-
-# Remove containers
-$ docker compose down
