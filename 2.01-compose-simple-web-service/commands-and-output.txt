@@ -1,6 +1,3 @@
-# First, I touch a file before mounting, because option -v creates a directory if the file does not exist.
-$ touch text.log
-
 # Touch text.log and up docker compose
 $ touch ./text.log && docker compose up
 WARN[0000] /media/ssg/datos/nocloud/workspaces/git/course-devops-with-docker-2024/2.01-compose-simple-web-service/docker-compose.yml: `version` is obsolete 
