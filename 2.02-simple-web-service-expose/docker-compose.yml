@@ -1,7 +1,16 @@
 version: '3.8'
 
-# run this docker compose with touch ./text.log && docker compose up
+# run this docker compose with
+# $ docker compose up
+# You can check with 
+# $ curl localhost:8090 
+# {"message":"You connected to the following path: /","path":"/"}%
+# Finish with 
+# $ docker compose down
 services:
 
   simple-web-service:
     image: devopsdockeruh/simple-web-service
+    ports:
+      - 127.0.0.1:8090:8080
+    command: server
