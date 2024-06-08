@@ -1,6 +1,8 @@
 version: '3.8'
 
 # run this docker compose with touch ./text.log && docker compose up
+# Finish with 
+# docker compose down
 services:
 
   simple-web-service:
