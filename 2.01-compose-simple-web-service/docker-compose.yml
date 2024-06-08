@@ -1,0 +1,10 @@
+version: '3.8'
+
+# run this docker compose with touch ./text.log && docker compose up
+services:
+
+  simple-web-service:
+    image: devopsdockeruh/simple-web-service
+    volumes:
+      - ./text.log:/usr/src/app/text.log # be sure to make touch ./text.log in folder you run this
+    container_name: simple-web-service
