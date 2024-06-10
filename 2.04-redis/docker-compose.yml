@@ -3,12 +3,15 @@ version: '3.8'
 ## run this docker compose with
 # $ docker compose up
 ## You can check with 
-# $ curl localhost:8080 
+# $ curl localhost:8090 
 # {"message":"You connected to the following path: /","path":"/"}%
 ## Finish with 
 # docker compose down
 services:
-
+  redis:
+    image: redis:7.2.5-alpine3.20
+    ports:
+      - '6379:6379'
   frontend:
     build: ../1.12-hello-frontend  
     ports:
@@ -19,3 +22,5 @@ services:
       - 8080:8080
     environment:
       - REQUEST_ORIGIN=http://localhost:5000
+      - REDIS_HOST=redis
+    restart: unless-stopped 
