@@ -8,6 +8,7 @@ version: '3.8'
 services:
   redis:
     image: redis:7.2.5-alpine3.20
+    restart: unless-stopped
   frontend:
     build: ../1.12-hello-frontend  
     ports:
@@ -19,4 +20,3 @@ services:
     environment:
       - REQUEST_ORIGIN=http://localhost:5000
       - REDIS_HOST=redis
-    restart: unless-stopped
