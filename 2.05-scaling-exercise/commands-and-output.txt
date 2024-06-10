@@ -1,0 +1,2 @@
+# In my case, with 3 instances are enough
+$ docker compose up -d --scale compute=3
