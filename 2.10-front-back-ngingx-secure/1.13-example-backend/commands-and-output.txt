@@ -1,0 +1,5 @@
+# Previosly, I've copied the project folder in this folder
+# Build and run
+$ docker build . -t example-backend && docker run -p 8080:8080 example-backend
+
+# After this, I open my browser in http://localhost:8080/ping and I view pong

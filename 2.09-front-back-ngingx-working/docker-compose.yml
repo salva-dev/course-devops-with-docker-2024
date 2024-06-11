@@ -1,0 +1,49 @@
+version: '3.8'
+
+## run this docker compose with
+# $ docker compose up --build
+## Open browser in localhost:5000
+## Finish with 
+# docker compose down
+services:
+  db:
+    image: postgres:16.3-alpine3.20
+    restart: unless-stopped
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=my.pwd
+    volumes:
+      - ./database:/var/lib/postgresql/data
+
+  redis:
+    image: redis:7.2.5-alpine3.20
+    restart: unless-stopped
+
+  backend:
+    build: ./1.13-example-backend
+    environment:
+      - REQUEST_ORIGIN=http://localhost
+      - REDIS_HOST=redis
+      - POSTGRES_HOST=db
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=my.pwd
+      - POSTGRES_DATABASE=postgres
+    depends_on:
+      - db
+
+  frontend:
+    build: 
+      context: ./1.12-hello-frontend
+      args:
+        - REACT_APP_BACKEND_URL=http://localhost/api
+    depends_on:
+      - db
+      - backend
+      - redis
+
+  nginx:
+    image: nginx:1.26-alpine3.19
+    ports:
+      - 80:80
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
