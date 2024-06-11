@@ -20,7 +20,7 @@ services:
     restart: unless-stopped
 
   backend:
-    build: ../1.13-example-backend
+    build: ./1.13-example-backend
     environment:
       - REQUEST_ORIGIN=http://localhost
       - REDIS_HOST=redis
@@ -33,7 +33,7 @@ services:
 
   frontend:
     build: 
-      context: ../1.12-hello-frontend
+      context: ./1.12-hello-frontend
       args:
         - REACT_APP_BACKEND_URL=http://localhost/api
     depends_on:
