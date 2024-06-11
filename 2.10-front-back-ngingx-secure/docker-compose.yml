@@ -1,8 +1,8 @@
 version: '3.8'
 
-## run this docker compose with
+# run this docker compose with
 # $ docker compose up --build
-## Open browser in localhost:5000
+## Open browser in localhost
 ## Finish with 
 # docker compose down
 services:
