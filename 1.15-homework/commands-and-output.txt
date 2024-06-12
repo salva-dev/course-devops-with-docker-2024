@@ -1,4 +1,3 @@
-# Previosly, I've copied the tar.gz folder of project in this folder.
 # I've chosen a drupal demo project.
 # dockerhub url is: https://hub.docker.com/repository/docker/salvahappydev/dwd-demosite
 
