@@ -1,4 +1,4 @@
-# Exercise 3.04 dockerize script
+# Exercise 3.03 scripting magic
 
 Script is builder.sh . I haven't changed anything.
 
