@@ -1,0 +1,6 @@
+# Previosly, I've copied the project folder in this folder
+# Build and run
+# Be sure host has user with UID 1000
+$ docker build . -t example-frontend &&  docker run -p 5000:5000 example-frontend 
+
+# After this, I open my browser in http://localhost:5000 and I view: Exercise 1.12: Congratulations! You configured your ports correctly!
