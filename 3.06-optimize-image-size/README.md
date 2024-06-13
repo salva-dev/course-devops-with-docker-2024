@@ -1,11 +1,23 @@
-# Exercise 3.03 scripting magic
+# Exercise 3.06 optimize image size
 
-Script is builder.sh . I haven't changed anything.
+I've copied each folder so the Dockerfiles are in its folder.
+In each folder are commands-and-output.txt
 
-For run you must pass to docker run <GitHub repo> <Docker Hub repo> <<Docker Hub user> <Docker Hub pwd>
-For example:
+## Image size before changes:
+
 ```console
-docker build . -t builder
-docker run --rm -v /var/run/docker.sock:/var/run/docker.sock \
-    builder:latest mluukkai/express_app salvahappydev/testing2 salvahappydev pass
+docker image ls | grep example
+example-backend                                                                latest                          7f795dee3954   21 minutes ago      447MB
+example-frontend                                                               latest                          ce634058c203   13 days ago         482MB
 ```
+
+## Changes and Image size after these changes:
+
+I have put together commands and I delete source files.
+
+```console
+docker image ls | grep example
+example-backend                                                                latest                          f8483d32e05c   About a minute ago   447MB
+example-frontend                                                               latest                          57b7452a747b   18 seconds ago       474MB
+```
+

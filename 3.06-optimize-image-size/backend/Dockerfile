@@ -9,16 +9,19 @@ WORKDIR /usr/src/app
 COPY ./example-backend .
 
 # Build the project
-RUN go build
+# Create a non-root user 
+# I put two shell commands together for minimze layers
+RUN go build && adduser -D -u 1000 appuser && cp ./server /usr/local/bin && rm -rf /usr/src/app
 
 # Set variables needed
 ENV PORT=8080
 ENV REQUEST_ORIGIN=http://localhost:5000
 
-# Create a non-root user and switch to it
+# Switch to non-root user
 # Be sure host has user with UID 1000
-RUN adduser -D -u 1000 appuser
 USER appuser
+
+WORKDIR /usr/local/bin
 
 # Run
 CMD ["./server", "."]
