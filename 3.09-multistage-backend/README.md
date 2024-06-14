@@ -1,4 +1,4 @@
-# Exercise 3.08 multistage example-frontend
+# Exercise 3.09 multistage example-backend
 
 As the application is an executable, I have used alpine as a base for the second phase of the Dockerfile and a great size optimisation is achieved, more than 400Mb!!
 
