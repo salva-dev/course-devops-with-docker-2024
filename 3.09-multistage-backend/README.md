@@ -1,17 +1,20 @@
 # Exercise 3.08 multistage example-frontend
 
-As the application is a static content I have used nginx as a base for the second phase of the Dockerfile and a great size optimisation is achieved, more than 400Mb!!
+As the application is an executable, I have used alpine as a base for the second phase of the Dockerfile and a great size optimisation is achieved, more than 400Mb!!
 
-## Image size before changes:
+## Changes and Image size before these changes:
+
+I have put together commands and I delete source files.
 
 ```console
 docker image ls | grep example
-example-frontend                                                               latest                          57b7452a747b   18 seconds ago       474MB
+example-backend                                                                latest                          f8483d32e05c   About a minute ago   447MB
 ```
+
 
 ## Changes and Image size after these changes:
 
 ```console
 docker image ls | grep example
-example-frontend                                                               latest                          f0c7759053d3   About a minute ago   23.8MB
+example-backend                                                                latest                          cc9e5d30f314   8 minutes ago    23.7MB
 ```
