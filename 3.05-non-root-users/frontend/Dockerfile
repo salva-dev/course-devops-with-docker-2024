@@ -9,7 +9,6 @@ WORKDIR /usr/src/app
 COPY ./example-frontend .
 
 # Install web server and prerequisites
-# and create a non-root user
 RUN npm install -g serve@14.2.3 \
     && npm install
 
